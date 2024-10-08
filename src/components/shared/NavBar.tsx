@@ -30,13 +30,13 @@ const NavBar = () => {
                 <a>Home</a>
               </li>
               <li>
-                <a>Parent</a>
+                <a>Advice</a>
                 <ul className="p-2">
                   <li>
-                    <a>Submenu 1</a>
+                    <a>Free Advice</a>
                   </li>
                   <li>
-                    <a>Submenu 2</a>
+                    <a>Premium Advice</a>
                   </li>
                 </ul>
               </li>
