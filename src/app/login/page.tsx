@@ -1,8 +1,24 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useForm } from "react-hook-form";
+
+type FormValues = {
+  email: string;
+  password: string;
+};
 
 const Login = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormValues>();
+
+  const onSubmit = async (data: FormValues) => {
+    console.log(data);
+  };
+
   return (
     <div className="my-10">
       <h1 className="text-center text-4xl mb-5">

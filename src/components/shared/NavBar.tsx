@@ -74,7 +74,18 @@ const Navbar = (/* { session }: { session: UserProps | null } */) => {
         </ul>
       </div>
       <div className="navbar-end">
-        <button>login</button>
+        <div className="navbar-end">
+          <button className="btn btn-error btn-outline text-white rounded-full px-5">
+            Logout
+          </button>
+
+          <Link
+            href="/login"
+            className="btn btn-accent btn-outline text-white rounded-full px-5"
+          >
+            Login
+          </Link>
+        </div>
 
         {/*  {session?.user ? (
           <button
