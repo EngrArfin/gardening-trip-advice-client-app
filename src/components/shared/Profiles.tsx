@@ -1,4 +1,4 @@
-import React from "react";
+/* import React from "react";
 import { Card, CardBody, Image, Button, IconButton } from "desiui"; // Example DesiUI imports
 import { HeartIcon } from "../../icons";
 
@@ -43,3 +43,4 @@ export default function Profiles() {
     </Card>
   );
 }
+ */
