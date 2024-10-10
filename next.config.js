@@ -2,7 +2,14 @@
 const nextConfig = {
   // Add your Next.js configuration options here, for example:
   images: {
-    domains: ["img.daisyui.com", "i.stack.imgur.com", "img.daisyui.com"],
+    domains: [
+      "img.daisyui.com",
+      "i.stack.imgur.com",
+      "img.daisyui.com",
+      "img.freepik.com",
+      "www.freepnglogos.com",
+      "cdn-icons-png.flaticon.com",
+    ],
   },
   reactStrictMode: true,
 };

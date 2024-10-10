@@ -1,35 +1,37 @@
 "use client";
 
 import Image from "next/image";
-import photo2 from "../../UI/image/cover2.jpg";
-import photo3 from "../../UI/image/cover3.jpg";
+import photo1 from "../../UI/image/gallery1.jpg";
+import photo2 from "../../UI/image/gallery2.jpg";
+import photo3 from "../../UI/image/gallery3.jpg";
+import photo4 from "../../UI/image/gallery4.jpg";
 
 const Gallery = () => {
   const images = [
+    photo1,
     photo2,
     photo3,
-    photo3,
+    photo4,
+    photo1,
     photo2,
     photo3,
+    photo4,
+    photo1,
     photo2,
     photo3,
+    photo4,
+    photo1,
     photo2,
     photo3,
-    photo3,
+    photo4,
+    photo1,
     photo2,
     photo3,
+    photo4,
+    photo1,
     photo2,
     photo3,
-    photo3,
-    photo2,
-    photo3,
-    photo2,
-    photo3,
-    photo2,
-    photo3,
-    photo3,
-    photo2,
-    photo3,
+    photo4,
   ];
 
   return (
