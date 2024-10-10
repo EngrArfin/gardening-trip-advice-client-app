@@ -1,7 +1,11 @@
+import Header from "@/components/Home/Header";
+import Footer from "@/components/shared/Footer";
+
 const page = () => {
   return (
     <div>
-      <h1>Landing Page</h1>
+      <Header />
+      <Footer />
     </div>
   );
 };
