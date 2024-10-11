@@ -1,11 +1,11 @@
 "use client";
 
 import Link from "next/link";
-/* import logo from "../../UI/image/logo.png"; */
 import logo from "../../UI/icon/Logo.jpg";
 
 import Image from "next/image";
-/* 
+import { signOut } from "next-auth/react";
+
 type UserProps = {
   user?: {
     name?: string | null | undefined;
@@ -13,8 +13,8 @@ type UserProps = {
     image?: string | null | undefined;
   };
 };
- */
-const Navbar = (/* { session }: { session: UserProps | null } */) => {
+
+const Navbar = ({ session }: { session: UserProps | null }) => {
   return (
     <div className="navbar bg-base-100  border-b  w-[90%] mx-auto">
       <div className="navbar-start">
@@ -104,31 +104,18 @@ const Navbar = (/* { session }: { session: UserProps | null } */) => {
         </ul>
       </div>
       <div className="navbar-end">
-        <div className="navbar-end">
-          <button className="btn btn-error btn-outline text-white  px-4">
-            Logout
-          </button>
-
-          <Link href="/login" className="btn  btn-outline text-green-600  px-4">
-            Login
-          </Link>
-        </div>
-
-        {/*  {session?.user ? (
+        {session?.user ? (
           <button
             onClick={() => signOut()}
-            className="btn btn-error btn-outline text-white rounded-full px-5"
+            className="btn btn-error btn-outline text-white  px-4"
           >
             Logout
           </button>
         ) : (
-          <Link
-            href="/login"
-            className="btn btn-accent btn-outline text-white rounded-full px-5"
-          >
+          <Link href="/login" className="btn  btn-outline text-green-600  px-4">
             Login
           </Link>
-        )} */}
+        )}
       </div>
     </div>
   );
