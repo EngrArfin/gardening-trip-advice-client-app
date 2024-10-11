@@ -2,7 +2,14 @@
 const nextConfig = {
   // Add your Next.js configuration options here, for example:
   images: {
-    domains: [
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+      },
+    ],
+
+    /* domains: [
       "img.daisyui.com",
       "i.stack.imgur.com",
       "img.daisyui.com",
@@ -11,9 +18,9 @@ const nextConfig = {
       "cdn-icons-png.flaticon.com",
       "avatars.githubusercontent.com",
       "lh3.googleusercontent.com",
-    ],
+    ], */
   },
-  reactStrictMode: true,
+  /* reactStrictMode: true, */
 };
 
 module.exports = nextConfig;

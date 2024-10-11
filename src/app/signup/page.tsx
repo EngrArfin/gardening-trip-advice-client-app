@@ -2,8 +2,10 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
+import { registerUser } from "@/utils/actions/registerUser";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 
 export type UserData = {
@@ -19,10 +21,18 @@ const SignUp = () => {
     formState: { errors },
   } = useForm<UserData>();
 
+  const router = useRouter();
+
   const onSubmit = async (data: UserData) => {
-    console.log(data);
+    /* console.log(data); */
 
     try {
+      const res = await registerUser(data);
+      /* console.log(res); */
+      if (res.success) {
+        alert(res.message);
+        router.push("/login");
+      }
     } catch (err: any) {
       console.error(err.message);
       throw new Error(err.message);
@@ -31,9 +41,7 @@ const SignUp = () => {
 
   return (
     <div className="my-10">
-      <h1 className="text-center text-4xl mb-5">
-        Register <span className="text-accent">Now</span>
-      </h1>
+      <h1 className="text-center text-4xl mb-5">SignUp Here</h1>
       <div className="grid grid-cols-2 gap-4">
         <div>
           <Image
