@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
 import login from "../../UI/image/login.jpg";
+import { signIn } from "next-auth/react";
 
 type FormValues = {
   email: string;
@@ -25,7 +26,7 @@ const Login = () => {
     <div className="max-h-screen flex items-center justify-center bg-gray-100 py-14 px-12 sm:px-8 lg:px-10">
       <div className="w-full max-w-lg bg-white shadow-lg rounded-lg p-8">
         <h2 className="text-center text-3xl font-bold text-gray-800 mb-6">
-          Login To Get <span className="text-blue-600">Advice </span>
+          Login To Get <span className="text-green-600">Advice </span>
         </h2>
         <div className="flex gap-6">
           <div className="hidden lg:block w-1/2">
@@ -66,7 +67,7 @@ const Login = () => {
               <div>
                 <button
                   type="submit"
-                  className="w-full py-2 px-4 bg-blue-600 text-white font-semibold rounded-md shadow hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full py-3 px-6 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg shadow-lg hover:from-blue-600 hover:to-indigo-700 focus:outline-none focus:ring-4 focus:ring-indigo-500 transition duration-200 ease-in-out transform hover:scale-105"
                 >
                   Login
                 </button>
@@ -81,20 +82,28 @@ const Login = () => {
             <div className="text-center mt-6 text-gray-500 divider">Or</div>
 
             <div className="flex justify-center gap-4 mt-4">
+              <button
+                onClick={() =>
+                  signIn("github", {
+                    callbackUrl: "http://localhost:3000/dashboard",
+                  })
+                }
+                className="p-3 bg-white border rounded-full shadow-md hover:shadow-lg"
+              >
+                <Image
+                  src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+                  width={30}
+                  height={30}
+                  alt="github logo"
+                />
+              </button>
+
               <button className="p-3 bg-white border rounded-full shadow-md hover:shadow-lg">
                 <Image
                   src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-webinar-optimizing-for-success-google-business-webinar-13.png"
-                  width={24}
-                  height={24}
+                  width={30}
+                  height={30}
                   alt="google logo"
-                />
-              </button>
-              <button className="p-3 bg-white border rounded-full shadow-md hover:shadow-lg">
-                <Image
-                  src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
-                  width={24}
-                  height={24}
-                  alt="github logo"
                 />
               </button>
             </div>

@@ -1,6 +1,10 @@
 "use client";
 
 import Link from "next/link";
+/* import logo from "../../UI/image/logo.png"; */
+import logo from "../../UI/icon/Logo.jpg";
+
+import Image from "next/image";
 /* 
 type UserProps = {
   user?: {
@@ -55,9 +59,25 @@ const Navbar = (/* { session }: { session: UserProps | null } */) => {
             </li>
           </ul>
         </div>
-        <Link href="/" className="btn btn-ghost text-xl">
-          Gardening Trip Advice
-        </Link>
+        <div className="flex items-center space-x-4">
+          <div className="overflow-hidden w-50 h-6 bg-gray-200 flex items-center justify-center">
+            <Image
+              src={logo}
+              alt="Logo"
+              width={80}
+              height={40}
+              className="object-cover"
+            />
+          </div>
+          <div>
+            <Link
+              href="/"
+              className="text-xl font-semibold text-gray-800 hover:text-gray-600 transition duration-200"
+            >
+              <span className="text-green-600 text-center">Advice </span>
+            </Link>
+          </div>
+        </div>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -85,14 +105,11 @@ const Navbar = (/* { session }: { session: UserProps | null } */) => {
       </div>
       <div className="navbar-end">
         <div className="navbar-end">
-          <button className="btn btn-error btn-outline text-white rounded-full px-5">
+          <button className="btn btn-error btn-outline text-white  px-4">
             Logout
           </button>
 
-          <Link
-            href="/login"
-            className="btn btn-accent btn-outline text-white rounded-full px-5"
-          >
+          <Link href="/login" className="btn  btn-outline text-green-600  px-4">
             Login
           </Link>
         </div>

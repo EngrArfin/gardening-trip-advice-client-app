@@ -9,6 +9,7 @@ const nextConfig = {
       "img.freepik.com",
       "www.freepnglogos.com",
       "cdn-icons-png.flaticon.com",
+      "avatars.githubusercontent.com",
     ],
   },
   reactStrictMode: true,
