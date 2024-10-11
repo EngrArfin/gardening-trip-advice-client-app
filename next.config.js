@@ -10,6 +10,7 @@ const nextConfig = {
       "www.freepnglogos.com",
       "cdn-icons-png.flaticon.com",
       "avatars.githubusercontent.com",
+      "lh3.googleusercontent.com",
     ],
   },
   reactStrictMode: true,

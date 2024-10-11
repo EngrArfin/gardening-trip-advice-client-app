@@ -98,7 +98,14 @@ const Login = () => {
                 />
               </button>
 
-              <button className="p-3 bg-white border rounded-full shadow-md hover:shadow-lg">
+              <button
+                className="p-3 bg-white border rounded-full shadow-md hover:shadow-lg"
+                onClick={() =>
+                  signIn("google", {
+                    callbackUrl: "http://localhost:3000/dashboard",
+                  })
+                }
+              >
                 <Image
                   src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-webinar-optimizing-for-success-google-business-webinar-13.png"
                   width={30}
