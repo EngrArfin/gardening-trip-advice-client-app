@@ -5,8 +5,10 @@ import Link from "next/link";
 import { useForm } from "react-hook-form";
 import login from "../../UI/image/login.jpg";
 import { signIn } from "next-auth/react";
+import { loginUser } from "@/utils/actions/loginUser";
+import { useRouter } from "next/navigation";
 
-type FormValues = {
+export type FormValues = {
   email: string;
   password: string;
 };
@@ -18,8 +20,22 @@ const Login = () => {
     formState: { errors },
   } = useForm<FormValues>();
 
+  const router = useRouter();
+
   const onSubmit = async (data: FormValues) => {
     console.log(data);
+    try {
+      const res = await loginUser(data);
+      if (res.accessToken) {
+        alert(res.message);
+        localStorage.setItem("accessToken", res.accessToken);
+        router.push("/");
+      }
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    } catch (err: any) {
+      console.error(err.message);
+      throw new Error(err.message);
+    }
   };
 
   return (
