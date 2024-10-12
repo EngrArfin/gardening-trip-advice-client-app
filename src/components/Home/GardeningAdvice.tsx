@@ -1,81 +1,109 @@
-// pages/gardening-advice.tsx
-
 import Image from "next/image";
 import React from "react";
+import aboutlogo from "../../UI/image/logo.png"; // Replace with your user image path
+
+import photo1 from "../../UI/image/gallery1.jpg";
+import photo2 from "../../UI/image/gallery2.jpg";
+import photo3 from "../../UI/image/gallery3.jpg";
+import photo4 from "../../UI/image/gallery4.jpg";
+import photo5 from "../../UI/image/gallery5.jpg";
+import photo6 from "../../UI/image/gallery6.jpg";
 
 const GardeningAdvice: React.FC = () => {
   return (
     <div className="bg-gray-100 min-h-screen">
-      <header className="bg-green-600 text-white p-6 text-center">
-        <h1 className="text-3xl font-bold">Gardening Advice Trip</h1>
-        <p className="mt-2">
-          Explore the best tips for a fruitful gardening experience!
+      <header className="bg-green-600 text-white p-8 text-center">
+        <h1 className="text-4xl font-bold">Gardening Advice & Tips</h1>
+        <p className="mt-2 text-lg">
+          Explore top tips to create a thriving garden!
         </p>
       </header>
 
       <div className="container mx-auto mt-8">
-        <div className="flex justify-center">
+        {/* User Section */}
+        <div className="flex flex-col items-center">
           <Image
-            src="/user-photo.jpg" // Replace with your user photo path
+            src={aboutlogo} // Replace with the user’s profile image path
             alt="User Photo"
-            className="rounded-full"
+            className="rounded-full shadow-lg border-4 border-green-600"
             width={120}
             height={120}
           />
+          <h2 className="text-2xl font-semibold mt-4">Jane Doe</h2>
+          <p className="text-gray-600">
+            Passionate Gardener | Environmental Advocate
+          </p>
+          <p className="mt-2 text-gray-700 text-center max-w-lg">
+            Jane has been gardening for over 15 years, sharing her insights and
+            passion for sustainable gardening with enthusiasts around the world.
+          </p>
         </div>
-        <h2 className="text-center text-2xl font-semibold mt-4">User Name</h2>
-        <p className="text-center text-gray-700">Gardening Enthusiast</p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+        {/* Tips Section */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 p-4">
           {tips.map((tip, index) => (
             <div
               key={index}
-              className="bg-white p-4 rounded-lg shadow-md transition-transform duration-200 hover:scale-105"
+              className="bg-white rounded-lg shadow-md hover:shadow-lg transition-transform duration-200 hover:scale-105 overflow-hidden"
             >
-              <h3 className="text-xl font-semibold">{tip.title}</h3>
-              <p className="mt-2">{tip.description}</p>
+              <Image
+                src={photo2}
+                alt={tip.title}
+                width={400}
+                height={300}
+                className="w-full h-40 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-green-700">
+                  {tip.title}
+                </h3>
+                <p className="mt-2 text-gray-600">{tip.description}</p>
+              </div>
             </div>
           ))}
         </div>
       </div>
-
-      <footer className="bg-green-600 text-white text-center p-4 mt-8">
-        <p>© 2024 Gardening Tips & Advice. All Rights Reserved.</p>
-      </footer>
     </div>
   );
 };
 
+// Tip data with images for each tip
 const tips = [
   {
-    title: "Tip 1: Choose the Right Plants",
+    title: "Choose the Right Plants",
     description:
-      "Selecting the appropriate plants for your climate and soil type is crucial. Research native plants that thrive in your area.",
+      "Select plants suited to your climate and soil type. Native plants often require less maintenance and thrive better.",
+    image: { photo1 }, // Replace with the actual image path
   },
   {
-    title: "Tip 2: Water Wisely",
+    title: "Water Wisely",
     description:
-      "Water early in the morning or late in the evening to reduce evaporation. Ensure deep watering to encourage strong root growth.",
+      "Water early in the morning or late in the evening to minimize evaporation. Deep watering encourages stronger roots.",
+    image: "/images/water.jpg", // Replace with the actual image path
   },
   {
-    title: "Tip 3: Mulching",
+    title: "Mulching",
     description:
-      "Applying mulch helps retain moisture, suppress weeds, and improve soil health. Organic mulches like straw or bark are excellent choices.",
+      "Mulching retains moisture, suppresses weeds, and enhances soil health. Organic mulches like bark are excellent choices.",
+    image: "/images/mulching.jpg", // Replace with the actual image path
   },
   {
-    title: "Tip 4: Pest Control",
+    title: "Pest Control",
     description:
-      "Regularly inspect your plants for pests. Use natural pest control methods such as neem oil or insecticidal soap to protect your garden.",
+      "Monitor your plants for pests. Use eco-friendly pest control like neem oil to protect your garden naturally.",
+    image: "/images/pest-control.jpg", // Replace with the actual image path
   },
   {
-    title: "Tip 5: Fertilize Appropriately",
+    title: "Fertilize Appropriately",
     description:
-      "Use organic fertilizers to provide essential nutrients without harming the environment. Composting kitchen scraps can also enrich your soil.",
+      "Opt for organic fertilizers to nourish plants without harming the environment. Compost is a great way to enrich soil naturally.",
+    image: "/images/fertilize.jpg", // Replace with the actual image path
   },
   {
-    title: "Tip 6: Plan Your Garden Layout",
+    title: "Plan Your Garden Layout",
     description:
-      "A well-planned garden layout maximizes space and sunlight. Consider companion planting to boost growth and deter pests.",
+      "A well-thought-out garden layout maximizes space. Companion planting boosts growth and wards off pests.",
+    image: "/images/garden-layout.jpg", // Replace with the actual image path
   },
 ];
 

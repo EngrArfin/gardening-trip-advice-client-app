@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import cover1 from "../../UI/image/gallery1.jpg"; // Ensure this import is correct
-import cover2 from "../../UI/image/gallery2.jpg"; // Ensure this import is correct
+import cover2 from "../../UI/image/logo.png"; // Ensure this import is correct
 
 const AboutUs: React.FC = () => {
   /*  const router = useRouter();

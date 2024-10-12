@@ -1,9 +1,10 @@
+import ContactUs from "@/components/Home/ContactUs";
 import React from "react";
 
 const Contact = () => {
   return (
     <div>
-      <h1>Hello, Contact!</h1>
+      <ContactUs></ContactUs>
     </div>
   );
 };
