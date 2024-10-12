@@ -42,7 +42,7 @@ const MidDashboard = () => {
       id: 4,
       author: "Heven Smith",
       content:
-        "If you grow vegetables, practice crop rotation each season to prevent soil depletion and reduce pest and disease buildup. This means not planting the same type of plants in the same spot every year, which keeps the soil healthier and your plants stronger.!",
+        "If you grow vegetables, practice crop rotation each season to prevent soil depletion and reduce pest and disease buildup. This means not planting the same type of plants in the same spot every year, which keeps the soil healthier and your plants stronger!",
       image: photo4,
       likes: 7,
       comments: [],
@@ -101,10 +101,10 @@ const MidDashboard = () => {
   };
 
   return (
-    <div className="max-h-screen bg-gray-100 p-6">
-      <main className="w-full max-w-2xl mx-auto ">
+    <div className="bg-gray-100 p-6">
+      <main className="w-full max-w-3xl mx-auto">
         {/* Create Post Section */}
-        <div className="bg-white p-4 rounded-lg shadow-md">
+        <div className="bg-white p-4 rounded-lg shadow-md mb-4">
           <textarea
             placeholder="What's on your mind?"
             className="w-full border rounded p-2 mb-2"
@@ -129,7 +129,7 @@ const MidDashboard = () => {
 
         {/* Feed Posts */}
         {posts.map((post) => (
-          <div key={post.id} className="bg-white p-4 rounded-lg shadow-md">
+          <div key={post.id} className="bg-white p-4 rounded-lg shadow-md mb-4">
             <div className="flex items-center space-x-2 mb-2">
               <svg
                 className="h-8 w-8 text-blue-500"
@@ -144,9 +144,9 @@ const MidDashboard = () => {
             {post.image && (
               <Image
                 src={post.image}
-                alt="Post"
-                height={100}
-                width={100}
+                alt="Post Image"
+                height={300} // Adjust the height as needed
+                width={300} // Adjust the width as needed
                 className="w-full max-h-80 object-cover rounded-md mb-2"
               />
             )}
