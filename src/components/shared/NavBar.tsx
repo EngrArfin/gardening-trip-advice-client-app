@@ -4,6 +4,7 @@ import Link from "next/link";
 import logo from "../../UI/icon/Logo.jpg";
 
 import Image from "next/image";
+import UserPforile from "../User/UserPforile";
 import { signOut } from "next-auth/react";
 
 type UserProps = {
@@ -103,6 +104,7 @@ const Navbar = ({ session }: { session: UserProps | null }) => {
           </li>
         </ul>
       </div>
+
       <div className="navbar-end">
         {session?.user ? (
           <button

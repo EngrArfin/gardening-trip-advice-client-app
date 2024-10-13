@@ -48,7 +48,7 @@ const Login = () => {
           <div className="hidden lg:block w-1/2">
             <Image
               src={login}
-              width={500}
+              width={900}
               height={200}
               alt="login page"
               className="rounded-md object-cover"
@@ -82,8 +82,8 @@ const Login = () => {
               </div>
               <div>
                 <Link
-                  href="/forget-send-otp"
-                  className="block text-sm font-medium text-sky-500"
+                  href="/forget-password"
+                  className="block text-sm font-medium text-green-500"
                 >
                   Forget Password
                 </Link>
@@ -91,7 +91,7 @@ const Login = () => {
               <div>
                 <button
                   type="submit"
-                  className="w-full py-3 px-6 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg shadow-lg hover:from-blue-600 hover:to-indigo-700 focus:outline-none focus:ring-4 focus:ring-indigo-500 transition duration-200 ease-in-out transform hover:scale-105"
+                  className="w-full py-3 px-6 bg-gradient-to-r from-green-500 to-teal-600 text-white font-semibold rounded-lg shadow-lg hover:from-green-600 hover:to-teal-700 focus:outline-none focus:ring-4 focus:ring-green-500 transition duration-200 ease-in-out transform hover:scale-105"
                 >
                   Login
                 </button>
@@ -99,7 +99,7 @@ const Login = () => {
             </form>
             <p className="text-center mt-4 text-sm text-gray-600">
               have no account?{" "}
-              <Link href="/signup" className="text-blue-600 hover:underline">
+              <Link href="/signup" className="text-green-600 hover:underline">
                 sign up
               </Link>
             </p>

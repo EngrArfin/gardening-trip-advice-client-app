@@ -1,7 +1,9 @@
 import Image from "next/image";
 import React from "react";
 import cover1 from "../../UI/image/gallery1.jpg"; // Ensure this import is correct
+import cover3 from "../../UI/image/gallery2.jpg"; // Ensure this import is correct
 import cover2 from "../../UI/image/logo.png"; // Ensure this import is correct
+import Link from "next/link";
 
 const AboutUs: React.FC = () => {
   /*  const router = useRouter();
@@ -50,11 +52,11 @@ const AboutUs: React.FC = () => {
         {/* Garden Photo Section */}
         <div className="mt-10">
           <Image
-            src="/garden-photo.jpg" // Replace with your garden photo path
+            src={cover3} // Replace with your garden photo path
             alt="Beautiful Garden"
             className="rounded-lg shadow-md w-full h-64 object-cover"
             width={800}
-            height={400}
+            height={800}
           />
         </div>
 
@@ -88,12 +90,12 @@ const AboutUs: React.FC = () => {
 
         {/* Join Us Button */}
         <div className="flex justify-center mt-6">
-          <button
-            /*  onClick={handleJoinUsClick} */
+          <Link
+            href="/login"
             className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition duration-300"
           >
             Join Us
-          </button>
+          </Link>
         </div>
 
         {/* Project Bio Section */}

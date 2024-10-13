@@ -69,7 +69,7 @@ const UserNavBar = async ({ session: data }: { session: UserProps | null }) => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li className="text-black">
-              <Link href="/home" className="flex items-center">
+              <Link href="/dashboard" className="flex items-center">
                 <TbHomeEco className="text-2xl" />
               </Link>
             </li>
@@ -145,13 +145,19 @@ const UserNavBar = async ({ session: data }: { session: UserProps | null }) => {
                 className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
               >
                 <li>
-                  <a className="justify-between">
+                  <Link
+                    href="profile-dashboard/my-profile"
+                    className="justify-between"
+                  >
                     {session?.user?.name}
-                    <span className="badge">New</span>
-                  </a>
+                    <span className="badge">follow</span>
+                  </Link>
                 </li>
                 <li>
-                  <a>{session?.user?.email}</a>
+                  <Link href="/profile-dashboard">
+                    {/* {session?.user?.email} */}
+                    Pfofile
+                  </Link>
                 </li>
                 <div>
                   {data?.user ? (

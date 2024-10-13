@@ -6,6 +6,9 @@ const ForgetSendOtp = () => {
     <div className="flex justify-center items-center min-h-screen bg-gray-100">
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
         <form action="" className="space-y-6">
+          <h1 className="text-center text-3xl font-bold text-gray-800 mb-6">
+            Send Email OTP
+          </h1>
           <div className="space-y-4">
             <p className="text-gray-700">
               An OTP has been sent to your email: (admin@gmail.com). It is valid
@@ -29,13 +32,6 @@ const ForgetSendOtp = () => {
             >
               Continue
             </Link>
-          </div>
-
-          <div className="text-center">
-            <p className="text-gray-700">Did not receive the OTP?</p>
-            <button className="text-accent" type="submit">
-              Resend OTP
-            </button>
           </div>
         </form>
       </div>

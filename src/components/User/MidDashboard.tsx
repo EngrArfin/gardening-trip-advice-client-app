@@ -10,7 +10,7 @@ const MidDashboard = () => {
   const [posts, setPosts] = useState([
     {
       id: 1,
-      author: "John Doe",
+      author: "Samsel Arfin",
       content:
         "Test your soil's pH and nutrient levels to understand what plants will thrive best. You can purchase a soil testing kit or send a sample to a local extension service. Once you know your soil's condition, amend it with compost or organic matter to improve its structure and nutrient content.",
       image: photo1,
