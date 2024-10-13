@@ -4,10 +4,10 @@ import aboutlogo from "../../UI/image/logo.png"; // Replace with your user image
 
 import photo1 from "../../UI/image/gallery1.jpg";
 import photo2 from "../../UI/image/gallery2.jpg";
-import photo3 from "../../UI/image/gallery3.jpg";
+/* import photo3 from "../../UI/image/gallery3.jpg";
 import photo4 from "../../UI/image/gallery4.jpg";
 import photo5 from "../../UI/image/gallery5.jpg";
-import photo6 from "../../UI/image/gallery6.jpg";
+import photo6 from "../../UI/image/gallery6.jpg"; */
 
 const GardeningAdvice: React.FC = () => {
   return (

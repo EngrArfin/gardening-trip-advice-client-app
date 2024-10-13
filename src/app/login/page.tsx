@@ -29,7 +29,7 @@ const Login = () => {
       if (res.accessToken) {
         alert(res.message);
         localStorage.setItem("accessToken", res.accessToken);
-        router.push("/");
+        router.push("/dashboard");
       }
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (err: any) {
@@ -79,6 +79,14 @@ const Login = () => {
                   className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
                   required
                 />
+              </div>
+              <div>
+                <Link
+                  href="/forget-send-otp"
+                  className="block text-sm font-medium text-sky-500"
+                >
+                  Forget Password
+                </Link>
               </div>
               <div>
                 <button
